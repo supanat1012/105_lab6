@@ -8,29 +8,26 @@ int main()
 
     for(i=0;i<n;i++)
     {
-        scanf("%s",A[i]);
+        scanf("%s",&A[i]);
     }
 
     for(i=0;i<n;i++)
     {
-            for(j=0;j<n;j++)
+            for(j=i+1;j<n;j++)
             {
                 if(strcmp(A[i],A[j])==1)
                 {
-                    strcpy(x,A[j]);
-                    strcpy(A[j],A[i]);
+                    strcpy(x,A[i]);
+                    strcpy(A[i],A[j]);
                     strcpy(A[j],x);
                 }
             }
 
     }
 
-
-
-
     for(i=0;i<n;i++)
     {
-        printf("%s\n",A[i]);
+        printf("\n%s",A[i]);
     }
 
 
