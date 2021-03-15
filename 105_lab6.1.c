@@ -13,12 +13,14 @@ int main()
 
     for(i=0;i<n;i++)
     {
-
-            if(strcmp(A[i],A[i+1]==1))
+            for(j=0;j<n;j++)
             {
-                strcpy(x,A[i+1]);
-                strcpy(A[i+1],A[i]);
-                strcpy(A[i],x);
+                if(strcmp(A[i],A[j])==1)
+                {
+                    strcpy(x,A[j]);
+                    strcpy(A[j],A[i]);
+                    strcpy(A[j],x);
+                }
             }
 
     }
